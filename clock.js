@@ -61,6 +61,8 @@ function runClock() {
     // === CHANGE THE DOM === //
     // because we're setting css in our js we need to set the value to a string
     secondHand.style.transform = `rotate(${(seconds / 60) * 360}deg)`
+    minuteHand.style.transform = `rotate(${(minutes / 60) * 360}deg)`
+    hourHand.style.transform = `rotate(${(hours / 12) * 360}deg)`
 }
 // invoke the funciton to see if it increments in the terminal
 // runClock()
