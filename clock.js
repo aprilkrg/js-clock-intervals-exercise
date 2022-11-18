@@ -27,6 +27,14 @@ function runClock() {
     seconds++
     // console log seconds value to check if it incremented
     console.log("sec:", seconds)
+    // check if the value of seconds is 60, and increment minutes if so
+    if(seconds > 59) {
+        minutes++
+        // set seconds to 0 to reset the value
+        seconds = 0
+    }
+    // console log minutes value to check if it incremented
+    console.log("min:", minutes)
 }
 // invoke the funciton to see if it increments in the terminal
 runClock()
