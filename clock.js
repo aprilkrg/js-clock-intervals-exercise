@@ -18,7 +18,7 @@ HOW DO WE APPROACH?
 
 // variables to hold the time values
 let seconds = 0
-let minutes = 0
+let minutes = 59
 let hours = 0
 
 // function to increment seconds
@@ -35,6 +35,14 @@ function runClock() {
     }
     // console log minutes value to check if it incremented
     console.log("min:", minutes)
+    // check if the value of minutes is 60, increment hours if so
+    if(minutes > 59) {
+        hours++
+        // set minutes to 0 to reset
+        minutes = 0
+    }
+    // console log hours value to check if it incremented
+    console.log("hr:", hours)
 }
 // invoke the funciton to see if it increments in the terminal
 runClock()
