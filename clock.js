@@ -13,13 +13,21 @@ HOW DO WE APPROACH?
 - write functions to console log values
 - check terminal to see if it's working
 - once it functions, then we'll move onto the dom
-
+- create dom variables
+- apply styles to dom variables so they move
+- move hands to proper place on clock
 */
 
 // variables to hold the time values
 let seconds = 45
 let minutes = 59
 let hours = 11
+
+// variable to select DOM elements
+const secondHand = document.querySelector("#second")
+const minuteHand = document.querySelector("#minute")
+const hourHand = document.querySelector("#hour")
+console.log("HANDS", secondHand, minuteHand, hourHand)
 
 // function to increment seconds
 function runClock() {
@@ -49,6 +57,7 @@ function runClock() {
     }
 }
 // invoke the funciton to see if it increments in the terminal
-runClock()
+// runClock()
+
 // set the interval to run every second, and save to a variable
 const clockInterval = setInterval(runClock, 1000)
