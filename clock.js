@@ -29,11 +29,10 @@ const minuteHand = document.querySelector("#minute")
 const hourHand = document.querySelector("#hour")
 console.log("HANDS", secondHand, minuteHand, hourHand)
 
-// because we're setting css in our js we need to set the value to a string
-secondHand.style.transform = `rotate(${180}deg)`
 
 // function to increment seconds
 function runClock() {
+    // === CHANGE THE DATA === //
     // increment seconds
     seconds++
     // console log seconds value to check if it incremented
@@ -58,6 +57,10 @@ function runClock() {
     if(hours > 11) {
         hours = 0
     }
+
+    // === CHANGE THE DOM === //
+    // because we're setting css in our js we need to set the value to a string
+    secondHand.style.transform = `rotate(${seconds}deg)`    
 }
 // invoke the funciton to see if it increments in the terminal
 // runClock()
