@@ -23,6 +23,23 @@ let seconds = 11
 let minutes = 59
 let hours = 0
 
+
+// ===== !! BONUS !! ===== //
+let currentTime = new Date()
+let currentSec = currentTime.getSeconds()
+let currentMin = currentTime.getMinutes()
+let currentHour = currentTime.getHours()
+
+seconds = currentSec
+minutes = currentMin
+if(currentHour > 12) {
+    hours = currentHour - 12
+} else {
+    hours = currentHour
+}
+// ===== !! BONUS !! ===== //
+
+
 // variable to select DOM elements
 const secondHand = document.querySelector("#second")
 const minuteHand = document.querySelector("#minute")
@@ -69,3 +86,5 @@ function runClock() {
 
 // set the interval to run every second, and save to a variable
 const clockInterval = setInterval(runClock, 1000)
+
+
