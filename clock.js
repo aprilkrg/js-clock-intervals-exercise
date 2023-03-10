@@ -18,74 +18,11 @@ HOW DO WE APPROACH?
 - move hands to proper place on clock
 */
 
-// variables to hold the time values
-let seconds = 11
-let minutes = 59
-let hours = 0
-
-// ===== !! BONUS !! ===== //
-let currentTime = new Date()
-let currentSec = currentTime.getSeconds()
-let currentMin = currentTime.getMinutes()
-let currentHour = currentTime.getHours()
-
-seconds = currentSec
-minutes = currentMin
-if (currentHour > 12) {
-	hours = currentHour - 12
-} else {
-	hours = currentHour
-}
-// ===== !! BONUS !! ===== //
-
 // variable to select DOM elements
 const secondHand = document.querySelector("#second")
 const minuteHand = document.querySelector("#minute")
 const hourHand = document.querySelector("#hour")
 // console.log("HANDS", secondHand, minuteHand, hourHand)
-
-// function to increment seconds
-function runClock() {
-	// === CHANGE THE DATA === //
-	// increment seconds
-	seconds++
-	// console log seconds value to check if it incremented
-	console.log("sec:", seconds)
-	// check if the value of seconds is 60, and increment minutes if so
-	if (seconds > 59) {
-		minutes++
-		// set seconds to 0 to reset the value
-		seconds = 0
-	}
-	// console log minutes value to check if it incremented
-	console.log("min:", minutes)
-	// check if the value of minutes is 60, increment hours if so
-	if (minutes > 59) {
-		hours++
-		// set minutes to 0 to reset
-		minutes = 0
-	}
-	// console log hours value to check if it incremented
-	console.log("hr:", hours)
-	// check if the value of hours is 12
-	if (hours > 11) {
-		hours = 0
-	}
-
-	// === CHANGE THE DOM === //
-	// because we're setting css in our js we need to set the value to a string
-	secondHand.style.transform = `rotate(${(seconds / 60) * 360}deg)`
-	minuteHand.style.transform = `rotate(${(minutes / 60) * 360}deg)`
-	hourHand.style.transform = `rotate(${(hours / 12) * 360}deg)`
-}
-// invoke the funciton to see if it increments in the terminal
-// runClock()
-
-// set the interval to run every second, and save to a variable
-// const clockInterval = setInterval(runClock, 1000)
-
-
-
 
 // ===== !! FUNCTIONAL APPROACH !! ===== //
 // increase seconds
