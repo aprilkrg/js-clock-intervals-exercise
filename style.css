@@ -1,14 +1,35 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #clock {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    z-index: 0;
 }
 
 #minute {
+    z-index: 5;
 }
 
 #second {
+    z-index: 10;
 }

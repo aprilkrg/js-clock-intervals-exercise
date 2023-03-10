@@ -19,9 +19,9 @@ HOW DO WE APPROACH?
 */
 
 // variables to hold the time values
-let seconds = 45
+let seconds = 11
 let minutes = 59
-let hours = 11
+let hours = 0
 
 // variable to select DOM elements
 const secondHand = document.querySelector("#second")
